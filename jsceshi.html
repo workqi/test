@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html><head lang="en">    
+<meta charset="UTF-8">    <title>购物车</title>
+<style>
+	        table{            width: 600px;            margin: 0 auto;            border-collapse: collapse;        }
+	        td{            border: 1px solid silver;            line-height: 40px;            text-align: center;        } 
+	       .btnl,.btnr{            border-style: none;            outline: none;            color: deeppink;        }  
+	        .txt{            width: 30px;            height: 30px;            border-style: none;            outline: none;            text-align: center;        } 
+	           </style>
+</head>
+<body>
+	<table>
+	<tr>
+		<td><button id="btna">全选</button></td>
+		<td>序号</td>
+		<td>名称</td>
+		<td>价钱</td>
+		<td>数量</td>
+		<td>小计</td>
+		<td>操作</td>
+	</tr>
+	<tr class="trinfo">
+		<td><input class="ckbox" type="checkbox"/></td>
+		<td>1</td>
+		<td>毛衣</td>
+		<td><span class="price">99</span>￥</td>
+		<td><button class="btnl">-</button><input type="text" class="txt" value="1"/><button class="btnr">+</button></td>
+		<td><span class="smallprice">99</span>￥</td> 
+		<td><button class="btndelete">删除</button></td>
+	</tr>    
+	<tr class="trinfo">
+	<td><input class="ckbox" type="checkbox"/></td>
+	<td>2</td>
+	<td>短袖</td>
+	<td><span class="price">108</span>￥</td>
+	<td><button class="btnl">-</button><input type="text" class="txt" value="1"/><button class="btnr">+</button></td>
+	<td><span class="smallprice">108</span>￥</td>
+	<td><button class="btndelete">删除</button></td>
+	</tr>
+	<tr class="trinfo">
+	<td><input class="ckbox" type="checkbox"/></td>
+	<td>3</td>        <td>运动鞋</td>
+	<td><span class="price">10000</span>￥</td>
+	<td><button class="btnl">-</button><input type="text" class="txt" value="1"/><button class="btnr">+</button></td>
+	<td><span class="smallprice">10000</span>￥</td>
+	<td><button class="btndelete">删除</button></td>    
+	</tr>
+	<tr class="trinfo">        
+		<td><input class="ckbox" type="checkbox"/></td>
+		<td>4</td>
+		<td>凉鞋</td>
+		<td><span class="price">25</span>￥</td>
+		<td><button class="btnl">-</button><input type="text" class="txt" value="1"/><button class="btnr">+</button></td>
+		<td><span class="smallprice">25</span>￥</td>
+		<td><button class="btndelete">删除</button></td>
+	</tr>
+	<tr >
+	<td><button id="btnf">反选</button></td> 
+	<td colspan="6"><span>总计：<span class="totle">0</span>￥</span><button>去结算</button></td>
+	</tr>
+	</table>
+	<script>
+	//获取左右的按钮集合
+	var btnleft=document.getElementsByClassName("btnl");
+	var btnright=document.getElementsByClassName("btnr");
+	//获取表示数量的class名为txt的input元素集合
+	var txt=document.getElementsByClassName("txt");
+	//获取表示单价的class名为price的span元素集合
+	var price=document.getElementsByClassName("price");
+	//获取表示小计的class名为smallprice的span元素集合
+	var small=document.getElementsByClassName("smallprice");
+	//获取表示总价的class名为totle的span元素
+	var totle=document.getElementsByClassName("totle")[0];
+	//获取全选反选按钮和选择框
+	var btna=document.getElementById("btna");
+	var btnf=document.getElementById("btnf");
+	var box=document.getElementsByClassName("ckbox");
+	//获取删除按钮
+	var btndelete=document.getElementsByClassName("btndelete");
+	var trlist=document.getElementsByClassName("trinfo");
+	var totleprice=0;
+	//定义全局变量totleprice的初值为0    //给数量左右两边的+-添加点击事件
+	for(var i=0;i<btnleft.length;i++)    {
+		btnleft[i].index=i;    //把i的值赋给btnleft[i]的index
+		btnleft[i].onclick=function (){            //获取当前对应的文本框的值
+		var val=txt[this.index].value;
+		val--;            //控制其数量的值不能小于1
+			if(val<=1)    {
+				val=1;  
+			}            txt[this.index].value=val;  //把更新了的val值再赋给txt[this.index].value
+			addprice(this.index);    //调用一下addprice()使其在当前变化下执行        
+		}        btnright[i].index=i;    //把i的值赋给btnright[i]的index
+		btnright[i].onclick=function (){ 
+			var val=txt[this.index].value;            val++;            txt[this.index].value=val;            addprice(this.index);        }        //给checkbox添加点击事件        box[i].onclick=function (){            showtotleprice();        }        //给删除添加点击事件        btndelete[i].index=i;        btndelete[i].onclick=function (){            totleprice-=parseFloat(small[this.index].innerText);    //将总计里面对应的价格也减掉            totle.innerText=totleprice;            trlist[this.index].remove();     //去掉对应的那一行元素            //重新更新索引  防止其他操作出错            for(var k=0;k<trlist.length;k++)            {                trlist[k].index=k;                btndelete[k].index=k;                btnleft[k].index=k;                btnright[k].index=k;            }        }    }    //计算小计    function addprice(index){        small[index].innerText=(price[index].innerText*txt[index].value);    }    //计算总计    function showtotleprice(){        totleprice=0;        for(var i=0;i<small.length;i++)        {            if(box[i].checked)            {                totleprice+=parseFloat(small[i].innerText);            }        }        totle.innerText=totleprice;    }    //全选    btna.onclick=function (){        for(var i=0;i<box.length;i++)        {            box[i].checked=true;        }        showtotleprice();    }    //反选    btnf.onclick=function (){        for(var i=0;i<box.length;i++)        {            box[i].checked=!box[i].checked;        }        showtotleprice();    }</script></body></html>

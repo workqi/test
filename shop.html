@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			header{
+				width: 1300px;height: 130px;margin: 0 auto;
+			}
+			.head_top{
+				width: 1300px;height: 35px;background-color: #f5f4f4;
+			}
+
+			.head_right{
+				width: 280px;height: 30px;float: right;color: gray;line-height: 35px;
+			}
+			.head_left{
+				width: 400px;height: 30px;color: gray;line-height: 35px;margin-left: 30px;
+			}
+			.head_ding{
+				width: 900px;height: 100px;margin: 0 auto;
+			}
+			.head_ding img{
+				width: 70px;height: 70px;margin: 0 auto;
+			}
+			a:link{
+				text-decoration: none;
+			}
+			
+			.articl_gou{
+				width: 900px;height: 20px;margin: 0 auto;margin-top: 10px;font-size: 20px;color: gray;
+			}
+			
+			.articl_midd{
+				width: 900px;margin: 0 auto;
+			}
+			.articl_jie{
+				width: 350px;height: 50px;float: right;
+			}
+			.articl_jie_suan{
+				width: 80px;height: 50px;background-color: #FF4466;float: right;font-weight: bold;line-height: 45px;
+				color: white;font-size: 18px;padding-left: 20px;
+			}
+			.articl_quan{
+				width: 160px;height: 50px;color: gray;font-size: 15px;line-height: 50px;padding-left: 28px;
+			}
+			a:hover{
+				color: #FF4466;
+			}
+			.articl_bot{
+				width: 900px;height: 50px;background-color: #f5f4f4;margin: 0 auto;margin-top: 10px;
+			}
+			footer{
+					width: 1300px;
+					height: 280px;
+					border-top: #FF4466 solid 2px;
+					margin: 0 auto;
+					background-color: rgb(253, 242, 236);
+					margin-top: ;
+			}
+			.footer_div{
+				width: 380px;
+				height: 200px;
+				float: right;
+				text-align: center;
+			}
+			.foot_table{
+				margin: 0 auto;
+				text-align: center;
+				line-height: 30px;
+			}
+			.foot_table th{
+				line-height: 40px;
+				color: rgb(102, 102, 102);
+			}
+			.foot_table td{
+				font-size: 15px;
+				color: gray;
+			}
+			.foot_midd{
+				width: 800px;
+				height: 50px;
+				margin:  0 auto;
+				font-size: 13px;
+				color: rgb(102, 102, 102);
+			}	
+			
+			 .table{            width: 900px;            margin: 0 auto;margin-top: 10px;       }
+	         .table td{          line-height: 40px;            text-align: center;        } 
+	       .btnl,.btnr{            border-style: none;            outline: none;            color: deeppink;        }  
+	        .txt{            width: 30px;            height: 30px;            border-style: none;            outline: none;            text-align: center;        } 
+	        .table_tr{
+	        	background-color: #f5f4f4;
+	        }
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="head_top">
+				<div class="head_right">
+					<a>订单查询 &nbsp;&nbsp;</a>
+					<a>购物车<span style="color:  red;"> 0 </span>件 &nbsp;&nbsp;</a>
+					<a>微信端</a>
+				</div>
+				<div class="head_left">
+					<span>您好，欢迎来到花多彩！ &nbsp;&nbsp;</span>
+					<a href="log.html">请登录 &nbsp;&nbsp;</a>
+					<a href="register.html">免费注册</a>
+				</div>
+			</div>
+				<div class="head_ding">
+					<p><img src="img/logo.jpg"></p>
+					
+				</div>
+				
+		</header>
+		<article>
+			<div class="articl_gou">我的购物车</div>
+			<div class="articl_midd">
+				<table class="table">
+					<tr class="table_tr">
+						<td>选择</td>
+						<td>序号</td>
+						<td>名称</td>
+						<td>价格</td>
+						<td>数量</td>
+						<td>操作</td>
+					</tr>
+					<tr class="trinfo">
+						<td><input class="ckbox" type="checkbox"/></td>
+						<td>1</td>
+						<td>比翼双飞</td>
+						<td>￥<span class="price">99</span></td>
+						<td><button class="btnl">-</button><input type="text" class="txt" value="1"/><button class="btnr">+</button></td>
+						<td><button class="btndelete">删除</button></td>
+						</tr>    
+						<tr class="trinfo">
+						<td><input class="ckbox" type="checkbox"/></td>
+						<td>2</td>
+						<td>蓝妖姬</td>
+						<td>￥<span class="price">520</span></td>
+						<td><button class="btnl">-</button><input type="text" class="txt" value="1"/><button class="btnr">+</button></td>
+						<td><button class="btndelete">删除</button></td>
+					</tr>
+					<tr class="trinfo">
+						<td><input class="ckbox" type="checkbox"/></td>
+						<td>3</td>
+						<td>爱你到老</td>
+						<td>￥<span class="price">199</span></td>
+						<td><button class="btnl">-</button><input type="text" class="txt" value="1"/><button class="btnr">+</button></td>
+						<td><button class="btndelete">删除</button></td>
+					</tr>
+					<tr class="trinfo">
+						<td><input class="ckbox" type="checkbox"/></td>
+						<td>4</td>
+						<td>满天星</td>
+						<td>￥<span class="price">299</span></td>
+						<td><button class="btnl">-</button><input type="text" class="txt" value="1"/><button class="btnr">+</button></td>
+						<td><button class="btndelete">删除</button></td>
+					</tr>
+				</table>
+				
+			</div>
+			<div class="articl_bot">
+				<div class="articl_jie">
+					<div class="articl_jie_suan">去结算</div>
+					<span>总计（不含运费）：<a style="color: red;">￥</a>
+						<a style="font-weight: bold;font-size: 30px;color: red;">300</a></span>
+				</div>
+				<div class="articl_quan">
+					<span><input class="ckbox" type="checkbox"/>全选</span> &nbsp;
+					<a>删除</a><span style="color:#FF4466;"> 3 </span>件商品
+				</div>	
+			</div>
+		</article>
+		<footer>
+			<div class="footer_div">
+				<p style="font-weight: bold;color: rgb(102, 102, 102);">花店服务热线</p>
+				<p style="color: #FF4466;font-size: 23px;">400-803-9638</p>
+				<img src="img/language.png" />
+			</div>
+			<table width="800px" class="foot_table">
+				<tr><th>客户服务</th><th>购物指南</th><th>支付方式</th><th>送花信息</th><th>售后服务</th></tr>
+				<tr><td>隐私条款</td><td>绿植寓意</td><td>在线支付</td><td>鲜花配送</td><td>订单查询</td></tr>
+				<tr><td>公司简介</td><td>鲜花支数寓意</td><td>银行转账</td><td>定时配送</td><td>取消订单</td></tr>
+				<tr><td>安全条款</td><td>购物须知</td><td>在线补款</td><td>销售说明</td><td>修改订单</td></tr>
+				<tr><td>联系方式</td><td>如何购买</td><td></td><td>发票说明</td><td></td></tr>
+				<tr><td>服务声明</td><td></td><td></td><td>销售范围及费用</td><td></td></tr>
+			</table>
+			<div class="foot_midd">
+				<p>本地订花热线：400-8039-638 | 技术支持热线：028-85578108 © 版权所有:四川爱尚美网络科技有限公司 蜀ICP备15011281</p>
+				
+			</div>
+		</footer>
+		
+	</body>
+</html>

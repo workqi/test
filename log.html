@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		header{
+			width: 1300px;
+			height: 100px;
+			border: ghostwhite solid 1px;
+			margin: 0 auto;
+		}
+		.head_right{
+			width: 400px;
+			height: 50px;
+			float: right;
+			padding-top: 25px;
+		}
+		.head_left{
+			width: 700px;
+			height: 80px;
+			padding-top: 20px;
+			float: right;
+		}
+		.head_left img{
+			width: 70px;
+			height: 70px;
+			vertical-align: middle;
+			text-align: center;
+		}
+		span{
+			font-size: 20px;
+		}
+		article{
+			width: 1300px;
+			height: 450px;
+			background-image: url(img/background.jpg);
+			background-position: 50%;
+			margin: 0 auto;
+		}
+		
+		.article_right{
+			width: 600px;
+			height: 340px;
+			float: right;
+		}
+		table{
+			font-size: 20px;
+			margin-top: 20px;
+			margin-left: 23px;
+		}
+		input{
+			width: 250px;
+			height: 34px;
+		}
+		.article_sub{
+			width: 253px;
+			height: 40px;
+			background-color: #FF4466;
+			border: 0px;
+			font-size: 18px;
+			color: white;
+		}
+		a{
+			float: right;
+			margin-right: 28px;
+			font-size: 15px;
+		}
+		a:link{
+			text-decoration: none;
+		}
+		.article_midd{
+			width: 400px;
+			height: 260px;
+			border: gainsboro solid 1px;
+			box-shadow:0 5px 5px #ccc;
+			background-color: white;
+			margin-top: 40px;
+		}
+		.article_midd img{
+			margin-left: 20px;
+		}
+		footer{
+				width: 1300px;
+				height: 280px;
+				border-top: #FF4466 solid 2px;
+				margin: 0 auto;
+				background-color: rgb(253, 242, 236);
+				margin-top: 30px;
+			}
+			.footer_div{
+				width: 380px;
+				height: 200px;
+				float: right;
+				text-align: center;
+			}
+			.foot_table{
+				margin: 0 auto;
+				text-align: center;
+				line-height: 30px;
+			}
+			.foot_table th{
+				line-height: 40px;
+				color: rgb(102, 102, 102);
+			}
+			.foot_table td{
+				font-size: 15px;
+				color: gray;
+			}
+			.foot_midd{
+				width: 800px;
+				height: 50px;
+				margin:  0 auto;
+				font-size: 13px;
+				color: rgb(102, 102, 102);
+			}
+	</style>
+	<body>
+		<header>
+			<div  class="head_right"><img src="img/phone.png" /></div>
+			<div class="head_left">
+				<img src="img/logo.jpg" />
+				<span style="color: #444;">欢迎登录</span>
+			</div>
+		</header>
+		<article>
+			<div class="article_right">
+				<div class="article_midd">
+					<form>
+						<table>
+							<tr><th>密码登录</th></tr>
+							<tr><td>用户名：</td><td><input type="text"></td></tr>
+							<tr><td>密 &nbsp;&nbsp;码：<td><input type="password"></td></td></tr>
+							<tr><td></td><td><input type="submit" value="登录" class="article_sub"></td></tr>
+						</table>
+					</form>
+					<p><a href="register.html">还没有账号？点我立即注册！</a></p>
+					<img src="img/qq.png" />
+					<img src="img/weixin.png" />
+				</div>
+			</div>
+		</article>
+		<footer>
+			<div class="footer_div">
+				<p style="font-weight: bold;color: rgb(102, 102, 102);">花店服务热线</p>
+				<p style="color: #FF4466;font-size: 23px;">400-803-9638</p>
+				<img src="img/language.png" />
+			</div>
+			<table width="800px" class="foot_table">
+				<tr><th>客户服务</th><th>购物指南</th><th>支付方式</th><th>送花信息</th><th>售后服务</th></tr>
+				<tr><td>隐私条款</td><td>绿植寓意</td><td>在线支付</td><td>鲜花配送</td><td>订单查询</td></tr>
+				<tr><td>公司简介</td><td>鲜花支数寓意</td><td>银行转账</td><td>定时配送</td><td>取消订单</td></tr>
+				<tr><td>安全条款</td><td>购物须知</td><td>在线补款</td><td>销售说明</td><td>修改订单</td></tr>
+				<tr><td>联系方式</td><td>如何购买</td><td></td><td>发票说明</td><td></td></tr>
+				<tr><td>服务声明</td><td></td><td></td><td>销售范围及费用</td><td></td></tr>
+			</table>
+			<div class="foot_midd">
+				<p>本地订花热线：400-8039-638 | 技术支持热线：028-85578108 © 版权所有:四川爱尚美网络科技有限公司 蜀ICP备15011281</p>
+				
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			header{
+			width: 1300px;
+			height: 100px;
+			border: ghostwhite solid 1px;
+			box-shadow:0 3px 5px #ccc;
+			margin: 0 auto;
+		}
+		.head_right{
+			width: 400px;
+			height: 50px;
+			float: right;
+			padding-top: 25px;
+		}
+		.head_left{
+			width: 700px;
+			height: 80px;
+			padding-top: 20px;
+			float: right;
+		}
+		.head_left img{
+			width: 70px;
+			height: 70px;
+			vertical-align: middle;
+			text-align: center;
+		}
+		span{
+			font-size: 20px;
+		}
+		article{
+			width: 1300px;
+			height: 420px;
+			margin: 0 auto;
+		}
+		.article_div{
+			width: 900px;
+			height: 400px;
+			border: gainsboro solid 1px;
+			box-shadow:0 5px 5px #ccc;
+			margin: 0 auto;
+			margin-top: 50px;
+		}
+		.articl_top{
+			width: 900px;
+			height: 30px;
+			background-color: #f1f1f1;
+		}
+		a{
+			float: right;
+			font-size: 13px;
+			line-height: 30px;
+			margin-right: 20px;
+		}
+		a:link{
+			text-decoration: none;
+		}
+		table{
+			text-align: right;
+			margin: 0 auto;
+			margin-top: 30px;
+		}
+		input{
+			width: 250px;
+			height: 34px;
+		}
+		.article_sub{
+			width: 254px;
+			height: 40px;
+			background-color: #FF4466;
+			border: 0px;
+			font-size: 18px;
+			color: white;
+		}
+		footer{
+				width: 1300px;
+				height: 280px;
+				border-top: #FF4466 solid 2px;
+				margin: 0 auto;
+				background-color: rgb(253, 242, 236);
+				margin-top: 30px;
+			}
+			.footer_div{
+				width: 380px;
+				height: 200px;
+				float: right;
+				text-align: center;
+			}
+			.foot_table{
+				margin: 0 auto;
+				text-align: center;
+				line-height: 30px;
+			}
+			.foot_table th{
+				line-height: 40px;
+				color: rgb(102, 102, 102);
+			}
+			.foot_table td{
+				font-size: 15px;
+				color: gray;
+			}
+			.foot_midd{
+				width: 800px;
+				height: 50px;
+				margin:  0 auto;
+				font-size: 13px;
+				color: rgb(102, 102, 102);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div  class="head_right"><img src="img/phone.png" /></div>
+			<div class="head_left">
+				<img src="img/logo.jpg" />
+				<span style="color: #444;">立即注册</span>
+			</div>
+		</header>
+		<article>
+			<div class="article_div">
+				<div class="articl_top">
+					<a href="log.html">已有账号！马上登录</a>
+				</div>
+				<form>
+					<table>
+						<tr><td>用户名：</td><td><input type="text" id="userid" onblur="checkname()"/></td></tr>
+						<tr><td>邮 &nbsp;&nbsp;箱：</td><td><input type="text" id="email" onblur="checkemail()"/></td></tr>
+						<tr><td>手机号：</td><td><input type="number" id="number" onblur="checknum()"/></td></tr>
+						<tr><td>密 &nbsp;&nbsp;码：</td><td><input type="password" id="userpassid"/></td></tr>
+						<tr><td>确定密码：</td><td><input type="password"/></td></tr>
+						<tr><td></td><td><input type="submit" value="注册" class="article_sub" onclick="checkform()"/></td></tr>
+					</table>
+				</form>
+			</div>
+			
+		</article>
+		<footer>
+			<div class="footer_div">
+				<p style="font-weight: bold;color: rgb(102, 102, 102);">花店服务热线</p>
+				<p style="color: #FF4466;font-size: 23px;">400-803-9638</p>
+				<img src="img/language.png" />
+			</div>
+			<table width="800px" class="foot_table">
+				<tr><th>客户服务</th><th>购物指南</th><th>支付方式</th><th>送花信息</th><th>售后服务</th></tr>
+				<tr><td>隐私条款</td><td>绿植寓意</td><td>在线支付</td><td>鲜花配送</td><td>订单查询</td></tr>
+				<tr><td>公司简介</td><td>鲜花支数寓意</td><td>银行转账</td><td>定时配送</td><td>取消订单</td></tr>
+				<tr><td>安全条款</td><td>购物须知</td><td>在线补款</td><td>销售说明</td><td>修改订单</td></tr>
+				<tr><td>联系方式</td><td>如何购买</td><td></td><td>发票说明</td><td></td></tr>
+				<tr><td>服务声明</td><td></td><td></td><td>销售范围及费用</td><td></td></tr>
+			</table>
+			<div class="foot_midd">
+				<p>本地订花热线：400-8039-638 | 技术支持热线：028-85578108 © 版权所有:四川爱尚美网络科技有限公司 蜀ICP备15011281</p>
+				
+			</div>
+		</footer>
+	</body>
+</html>
+<script type="text/javascript">
+	function checkname(){
+		 var result = document.getElementById("userid").value;
+		 if(result == "" ){
+			alert("用户名不能为空");
+			return false;
+		 }
+	}
+	function checkemail(){
+			 var email=document.getElementById("email").value;
+		if(email == ""){ 
+			alert("邮箱不能为空!");
+			return false;
+	　　}
+	　　var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            if(!myreg.test(email.value)){
+                 alert("请输入正确的邮箱");
+                return false;
+            }
+            
+	}
+	function checknum(){
+		  var numbers=document.getElementById("number").value;
+           if(numbers == ""){
+           	alert('手机号不能为空');
+           	return false;
+           }
+           if (numbers.length=11) {
+           	alert('请输入正确的手机号');
+           	return false;
+           }
+	}
+	 function checkform()    {
+	 	checkname();checkemail();checknum();
+	 	if(checkname()&&checkemail()&&checknum()){
+	 		return true;
+	 	}else{
+	 		return false;      
+	 	}    
+	 }
+
+
+</script>
